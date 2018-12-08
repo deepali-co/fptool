@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ruleset name="IdentifyPojoClassesRuleSet"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+    <rule name="IdentifyPojoClassesRule"
+          message="Identify POJO classes"
+          class="com.myapps.fptool.pmd.rules.IdentifyPojoClassesRule">
+      <description>
+Identify POJO classes
+      </description>
+      <priority>3</priority>
+      <example>
+<![CDATA[
+public class PojoClass {
+	private String objectField;
+	private int basicField;
+	private List<String> complexField;
+	public String getObjectField() {
+		return objectField;
+	}
+	public void setObjectField(String objectField) {
+		this.objectField = objectField;
+	}
+	public int getBasicField() {
+		return basicField;
+	}
+	public void setBasicField(int basicField) {
+		this.basicField = basicField;
+	}
+	public List<String> getComplexField() {
+		return complexField;
+	}
+	public void setComplexField(List<String> complexField) {
+		this.complexField = complexField;
+	}
+	@Override
+	public String toString() {
+		return "";
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		return 1;
+	}
+}
+]]>
+      </example>
+    </rule>
+</ruleset>
